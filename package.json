@@ -3,6 +3,9 @@
   "type": "module",
   "version": "1.0.0",
   "description": "",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +21,3 @@
   },
   "homepage": "https://github.com/OliveMoor/frontend-project-lvl1#readme"
 }
-  "bin": {
-  "brain-games": "bin/brain-games.js"
-},
