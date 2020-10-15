@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "games/brain-even",
+    "brain-calc.js": "games/brain-calc.js"
   },
   "main": "index.js",
   "scripts": {
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/OliveMoor/frontend-project-lvl1#readme",
   "dependencies": {
+    "@hexlet/pairs": "^1.1.0",
     "promptly": "^3.0.3",
     "readline-sync": "^1.4.10"
   },
