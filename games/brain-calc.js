@@ -30,7 +30,7 @@ const generateData = () => {
   const mathOperation = calcMathOperations[getRandomNum(0, calcMathOperations.length - 1)];
 
 
-  const question = `${firstNum} ${calcMathOperations} ${secondNum}`;
+  const question = `${firstNum} ${mathOperation} ${secondNum}`;
   const answer = getCalcOperation(firstNum, secondNum, mathOperation);
   return [question, answer];
 };
