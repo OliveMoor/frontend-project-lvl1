@@ -17,10 +17,7 @@ jobs :
        - name : Install Node.js dependencies
          run : npm install
 
-       - name : make lint
-         uses : wearerequired/lint-action@v1
-         with :
-           github_token : ${{ secrets.github_token }}
+       
            # Enable linter
            eslint : true
      
