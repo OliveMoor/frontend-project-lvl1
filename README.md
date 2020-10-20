@@ -4,3 +4,5 @@
 
 
 [![GitHub Lint Action](https://github.com/OliveMoor/frontend-project-lvl1/actions?query=workflow%3ALint/badge.svg)](https://github.com/OliveMoor/frontend-project-lvl1/actions)
+
+[![Lint](https://github.com/OliveMoor/frontend-project-lvl1/actions?query=workflow%3ALint/badge.svg)](https://github.com/OliveMoor/frontend-project-lvl1/workflows/Lint/badge.svg?branch=master)
