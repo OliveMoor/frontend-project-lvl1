@@ -1,8 +1,5 @@
 # frontend-project-lvl1
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/1979eccfa5d90101d351/maintainability)](https://codeclimate.com/github/OliveMoor/frontend-project-lvl1/maintainability)
+[![GitHub Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-
-[![GitHub Lint Action](https://github.com/OliveMoor/frontend-project-lvl1/actions?query=workflow%3ALint/badge.svg)](https://github.com/OliveMoor/frontend-project-lvl1/actions)
-
-[![Lint](https://github.com/OliveMoor/frontend-project-lvl1/actions?query=workflow%3ALint/badge.svg)](https://github.com/OliveMoor/frontend-project-lvl1/workflows/Lint/badge.svg?branch=master)
+[![Lint](https://github.com/OliveMoor/frontend-project-lvl1/workflows/Lint/badge.svg)](https://github.com/OliveMoor/frontend-project-lvl1/actions)
