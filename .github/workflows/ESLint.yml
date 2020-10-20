@@ -4,7 +4,7 @@ on : [push]
 
 jobs :
    run-linter :
-     name : Run linter
+     name : make lint
      runs-on : macos-latest
 
      steps :
@@ -20,7 +20,7 @@ jobs :
        - name : Install Node.js dependencies
          run : npm install
 
-       - name : Run linter
+       - name : make lint
          uses : wearerequired/lint-action@v1
          with :
            github_token : ${{ secrets.github_token }}
