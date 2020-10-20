@@ -5,9 +5,10 @@
   "description": "",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "games/brain-even",
-    "brain-calc.js": "games/brain-calc.js",
-    "brain-gcd.js": "bin/brain-gcd.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js"
   },
   "main": "index.js",
   "scripts": {

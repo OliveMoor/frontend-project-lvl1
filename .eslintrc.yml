@@ -2,10 +2,9 @@ env:
     node: true
     es2020: true
 
- extends:
+extends:
     - 'airbnb-base'
-    - 'plugin:jest/recommended'
 
- rules:
+rules:
       no-console: 0
       import/extensions: 0
