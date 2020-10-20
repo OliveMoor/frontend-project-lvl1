@@ -1,24 +1,29 @@
-name: Run ESLint on push
+name: Lint
 
-on:
-  - push
+on: push
 
 jobs:
-  build:
-    name: Run ESLint
+  run-linters:
+    name: Run linters
     runs-on: ubuntu-latest
-    steps:
-      
-      # Check out the repository
-      - uses: actions/checkout@v1
 
-      # Install Node.js
-      - uses: actions/setup-node@v1
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: 12
 
-      # Install your dependencies
-      - run: npm ci
+      # ESLint and Prettier must be in `package.json`
+      - name: Install Node.js dependencies
+        run: npm install
 
-      # Run ESLint
-      - uses: eslint/github-action@v0
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          eslint: true
+          prettier: true
