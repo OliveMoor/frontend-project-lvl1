@@ -1,9 +1,9 @@
-import promptly from "promptly";
+import promptly from 'promptly';
 
 const greeting = async () => {
-  console.log("Welcome to the Brain Games!");
+  console.log('Welcome to the Brain Games!');
 
-  const name = await promptly.prompt("May I have your name? ");
+  const name = await promptly.prompt('May I have your name? ');
   console.log(`Hello, ${name}!`);
 };
 export default greeting;
