@@ -10,7 +10,7 @@ const getElement = () => {
   const progression = [];
 
   for (let i = 0; i < length; i += 1) {
-    progression.push(firstElement + (step * i));
+    progression.push(firstElement + step * i);
   }
 
   const element = progression[elementIndex];
