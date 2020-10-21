@@ -5,7 +5,7 @@ on: push
 jobs:
   run-linter:
     name: Run linter
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Check out Git repository
