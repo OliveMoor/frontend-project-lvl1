@@ -21,7 +21,8 @@ jobs:
         run: npm install
 
       - name: Run linter
-        uses: ./npx eslint .
+        run: |
+          make lint
 
         with:
           github_token: ${{ secrets.github_token }}
