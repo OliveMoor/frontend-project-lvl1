@@ -6,13 +6,7 @@ extends:
   - "airbnb-base"
 
 rules:
-<<<<<<< HEAD
   no-console: 0
   import/extensions: 0
   no-await-in-loop: 0
-=======
-      no-console: 0
-      import/extensions: 0
-      no-await-in-loop: 0
-      max-len: 0
->>>>>>> 8ee6eddffd770f26b9bde3702cdd04c0e77f72e5
+  

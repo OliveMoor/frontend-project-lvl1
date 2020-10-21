@@ -1,6 +1,6 @@
 import promptly from 'promptly';
 
-export const getRandomNum = (min = 0, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getRandomNum = (min = 0, max = 100) => Math.floor(Math.random() * (max - min)) + min;
 
 const startGame = async (description, generateData) => {
   console.log('Welcome to the Brain Games!');
@@ -18,9 +18,7 @@ const startGame = async (description, generateData) => {
     if (userAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(
-        `"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".\nLet's try again, ${name}!`
-      );
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".\nLet's try again, ${name}!`);
       return;
     }
   }
