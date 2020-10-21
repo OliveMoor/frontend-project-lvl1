@@ -24,7 +24,7 @@ jobs:
         run: |
           make lint
 
-        with:
+      
           github_token: ${{ secrets.github_token }}
           # Enable linters
           eslint: true
