@@ -11,7 +11,7 @@ const isPrime = (num) => {
   }
 
   const iter = (acc) => {
-    if (acc > Math.floor(num / 2)) {
+    if (acc > num / 2) {
       return true;
     }
     if (num % acc === 0) {
@@ -24,7 +24,7 @@ const isPrime = (num) => {
 };
 
 const generateData = () => {
-  const question = getRandomNum();
+  const question = getRandomNum(2, 300);
   const answer = isPrime(question) ? 'yes' : 'no';
 
   return [question, answer];

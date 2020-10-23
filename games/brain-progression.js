@@ -2,25 +2,19 @@ import startGame, { getRandomNum } from '../src/index.js';
 
 const description = 'What number is missing in the progression?';
 
-const getElement = () => {
+const generateData = () => {
   const length = 10;
-  const firstElement = getRandomNum(1, 5);
-  const step = getRandomNum(2, 10);
+  const firstElement = getRandomNum(1, 10);
+  const step = getRandomNum(2, 50);
   const elementIndex = getRandomNum(0, length - 1);
-  const progression = [];
-
+  const arr = [];
   for (let i = 0; i < length; i += 1) {
-    progression.push(firstElement + step * i);
+    arr.push(firstElement + step * i);
   }
 
-  const element = progression[elementIndex];
-  progression[elementIndex] = '..';
-
-  return [progression.join(' '), String(element)];
-};
-
-const generateData = () => {
-  const [question, answer] = getElement();
+  const answer = String(arr[elementIndex]);
+  arr[elementIndex] = '..';
+  const question = arr.join(' ');
 
   return [question, answer];
 };

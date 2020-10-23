@@ -18,9 +18,9 @@ const getCalcOperation = (a, b, operation) => {
 };
 
 const generateData = () => {
-  const firstNum = getRandomNum(0, 10);
-  const secondNum = getRandomNum(0, 10);
-  const mathOperation = calcMathOperations[getRandomNum(0, calcMathOperations.length - 1)];
+  const firstNum = getRandomNum(0, 50);
+  const secondNum = getRandomNum(0, 50);
+  const mathOperation = calcMathOperations[getRandomNum(0, 2)];
 
   const question = `${firstNum} ${mathOperation} ${secondNum}`;
   const answer = getCalcOperation(firstNum, secondNum, mathOperation);
