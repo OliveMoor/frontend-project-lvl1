@@ -13,8 +13,7 @@ const startGame = async (description, generateData) => {
   console.log(`${description}`);
 
   for (let i = 0; i < 3; i += 1) {
-    const gameData = generateData();
-    const [question, correctAnswer] = gameData;
+    const [question, correctAnswer] = generateData();
 
     console.log(`Question: ${question}`);
     const userAnswer = await promptly.prompt('Your answer: ');
@@ -22,11 +21,11 @@ const startGame = async (description, generateData) => {
       console.log('Correct!');
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${name}!`);
-      return;
+      return false;
     }
   }
-
   console.log(`Congratulations, ${name}!`);
+  return true;
 };
 
 export default startGame;
