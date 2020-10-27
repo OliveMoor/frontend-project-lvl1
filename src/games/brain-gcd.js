@@ -1,4 +1,4 @@
-import startGame, { getRandomNum } from '../src/index.js';
+import startGame, { getRandomNum } from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 

@@ -26,9 +26,7 @@
   },
   "homepage": "https://github.com/OliveMoor/frontend-project-lvl1#readme",
   "dependencies": {
-    "@hexlet/pairs": "^1.1.0",
-    "promptly": "^3.0.3",
-    "readline-sync": "^1.4.10"
+    "promptly": "^3.0.3"
   },
   "devDependencies": {
     "eslint": "^7.2.0",

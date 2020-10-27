@@ -1,4 +1,4 @@
-import startGame, { getRandomNum } from '../src/index.js';
+import startGame, { getRandomNum } from '../index.js';
 
 const description = 'What is the result of the expression?';
 

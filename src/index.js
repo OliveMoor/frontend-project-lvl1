@@ -14,14 +14,14 @@ const startGame = async (description, generateData) => {
 
   for (let i = 0; i < 3; i += 1) {
     const gameData = generateData();
-    const [question, answer] = gameData;
+    const [question, correctAnswer] = gameData;
 
     console.log(`Question: ${question}`);
     const userAnswer = await promptly.prompt('Your answer: ');
-    if (userAnswer === answer) {
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".\nLet's try again, ${name}!`);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${name}!`);
       return;
     }
   }

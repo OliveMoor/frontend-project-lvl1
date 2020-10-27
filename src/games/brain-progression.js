@@ -1,4 +1,4 @@
-import startGame, { getRandomNum } from '../src/index.js';
+import startGame, { getRandomNum } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
