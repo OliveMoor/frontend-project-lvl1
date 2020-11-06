@@ -1,31 +1,34 @@
 import promptly from 'promptly';
 
-export const getRandomNum = (min = 0, max = 100) => {
-  const value = Math.floor(Math.random() * (max - min) + 1) + min;
-  return value;
-};
-
 const startGame = async (description, generateData) => {
   console.log('Welcome to the Brain Games!');
 
   const name = await promptly.prompt('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(`${description}`);
-  let acc = 0;
-  while (acc < 3) {
-    acc += 1;
+
+  let hadWrongAnswer;
+  let attemptsLeft = 3;
+
+  while (attemptsLeft !== 0 && !hadWrongAnswer) {
     const [question, correctAnswer] = generateData();
 
     console.log(`Question: ${question}`);
     const userAnswer = await promptly.prompt('Your answer: ');
-    if (userAnswer === correctAnswer) {
+
+    hadWrongAnswer = userAnswer !== correctAnswer;
+
+    if (hadWrongAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+    } else {
       console.log('Correct!');
-    } if (acc === 3) {
-      console.log(`Congratulations, ${name}!`);
-    } else if (userAnswer !== correctAnswer) {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${name}!`);
-      break;
     }
+
+    attemptsLeft -= 1;
+  }
+
+  if (!hadWrongAnswer) {
+    console.log(`Congratulations, ${name}!`);
   }
 };
 
