@@ -3,9 +3,12 @@ import getRandomNum from '../random.js';
 
 const description = 'What is the result of the expression?';
 
+const min = 1;
+const max = 50;
+
 const calcMathOperations = ['+', '-', '*'];
 
-const getCalcOperation = (a, b, operation) => {
+const calcMathExpression = (a, b, operation) => {
   switch (operation) {
     case '+':
       return String(a + b);
@@ -13,21 +16,22 @@ const getCalcOperation = (a, b, operation) => {
     case '-':
       return String(a - b);
 
-    default:
+    case '*':
       return String(a * b);
+
+    default:
+      return false;
   }
 };
 
-const generateData = () => {
-  const firstNum = getRandomNum(0, 50);
-  const secondNum = getRandomNum(0, 50);
-  const mathOperation = calcMathOperations[getRandomNum(0, 2)];
+const getQuestionAndAnswer = () => {
+  const firstNum = getRandomNum(min, max);
+  const secondNum = getRandomNum(min, max);
+  const mathOperation = calcMathOperations[getRandomNum(0, calcMathOperations.length - 1)];
 
   const question = `${firstNum} ${mathOperation} ${secondNum}`;
-  const answer = getCalcOperation(firstNum, secondNum, mathOperation);
+  const answer = calcMathExpression(firstNum, secondNum, mathOperation);
   return [question, answer];
 };
 
-const startBrainCalc = () => startGame(description, generateData);
-
-export default startBrainCalc;
+export default () => startGame(description, getQuestionAndAnswer);

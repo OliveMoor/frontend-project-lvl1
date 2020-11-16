@@ -1,6 +1,6 @@
 import promptly from 'promptly';
 
-const startGame = async (description, generateData) => {
+const startGame = async (description, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
 
   const name = await promptly.prompt('May I have your name? ');
@@ -11,7 +11,7 @@ const startGame = async (description, generateData) => {
   let attemptsLeft = 3;
 
   while (attemptsLeft !== 0 && !hadWrongAnswer) {
-    const [question, correctAnswer] = generateData();
+    const [question, correctAnswer] = getQuestionAndAnswer();
 
     console.log(`Question: ${question}`);
     const userAnswer = await promptly.prompt('Your answer: ');

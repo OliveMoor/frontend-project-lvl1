@@ -3,10 +3,13 @@ import getRandomNum from '../random.js';
 
 const description = 'What number is missing in the progression?';
 
-const generateData = () => {
+const min = 2;
+const max = 50;
+
+const getQuestionAndAnswer = () => {
   const length = 10;
-  const firstElement = getRandomNum(1, 10);
-  const step = getRandomNum(2, 50);
+  const firstElement = getRandomNum(1, length);
+  const step = getRandomNum(min, max);
   const elementIndex = getRandomNum(0, length - 1);
   const arr = [];
   for (let i = 0; i < length; i += 1) {
@@ -21,7 +24,7 @@ const generateData = () => {
 };
 
 const startBrainProgression = () => {
-  startGame(description, generateData);
+  startGame(description, getQuestionAndAnswer);
 };
 
 export default startBrainProgression;
