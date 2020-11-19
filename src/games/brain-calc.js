@@ -20,7 +20,7 @@ const calcMathExpression = (a, b, operation) => {
       return String(a * b);
 
     default:
-      return false;
+      throw new Error('This operation cannot be performed!');
   }
 };
 
